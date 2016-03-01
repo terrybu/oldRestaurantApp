@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SF-UI-Display-Medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </mutableArray>
+        <mutableArray key="SF-UI-Display-Regular.otf">
+            <string>SFUIDisplay-Regular</string>
+            <string>SFUIDisplay-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="8h7-5i-ct1" customClass="VenueMenuTableViewCell" customModule="Tastii" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8h7-5i-ct1" id="3rc-6P-vWJ">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="760" text="AVOCADO BURGER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lB-rw-lOq" userLabel="Menu Item Name Label">
+                        <rect key="frame" x="60" y="12" width="480" height="22"/>
+                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="18"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fresh avocado, lettuce, tomato, ranch dressing &amp; mayo on a multigrain bun with sweet potato fries" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgF-2t-tid" userLabel="Menu Item Description Label">
+                        <rect key="frame" x="30" y="38" width="540" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="fA3-1b-hEX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPV-Ds-OyA" userLabel="MoreButton">
+                        <rect key="frame" x="566" y="10" width="26" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="SVh-8y-Aqo"/>
+                            <constraint firstAttribute="height" constant="50" id="hC9-7e-ngq"/>
+                        </constraints>
+                        <state key="normal" image="Btn_MyList_DETAILSINCIRCLE_01"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="SVh-8y-Aqo"/>
+                                <exclude reference="hC9-7e-ngq"/>
+                            </mask>
+                        </variation>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="terryFace" translatesAutoresizingMaskIntoConstraints="NO" id="7IU-bh-0oy">
+                        <rect key="frame" x="209" y="130" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="jZB-Xi-G2E"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jZB-Xi-G2E"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="miashaFace" translatesAutoresizingMaskIntoConstraints="NO" id="icu-IN-4he">
+                        <rect key="frame" x="278" y="130" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="5Wp-RJ-eD2"/>
+                            <constraint firstAttribute="height" constant="45" id="n1E-2D-xTc"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jdFace" translatesAutoresizingMaskIntoConstraints="NO" id="Dj9-kL-FGI">
+                        <rect key="frame" x="347" y="130" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="9fD-sP-agU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9fD-sP-agU"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A5d-eH-2P9" userLabel="Gray Divider">
+                        <rect key="frame" x="0.0" y="198" width="600" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Wbq-WG-y4x"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="tPV-LG-Z5O"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="tPV-LG-Z5O"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$12.50 - 0.3 mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnM-Lt-WIg" userLabel="Menu Item Price Distance Label">
+                        <rect key="frame" x="247" y="106" width="107" height="20"/>
+                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LgF-2t-tid" firstAttribute="width" secondItem="3rc-6P-vWJ" secondAttribute="width" multiplier="0.9:1" id="0PF-5W-Ie2"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="icu-IN-4he" secondAttribute="bottom" constant="16" id="1FZ-IW-CTA"/>
+                    <constraint firstItem="7IU-bh-0oy" firstAttribute="top" secondItem="icu-IN-4he" secondAttribute="top" id="24v-ws-D6U"/>
+                    <constraint firstItem="Dj9-kL-FGI" firstAttribute="width" secondItem="icu-IN-4he" secondAttribute="width" id="3kT-UX-UW0"/>
+                    <constraint firstItem="5lB-rw-lOq" firstAttribute="centerX" secondItem="3rc-6P-vWJ" secondAttribute="centerX" id="6Yb-ae-0kP"/>
+                    <constraint firstItem="A5d-eH-2P9" firstAttribute="leading" secondItem="3rc-6P-vWJ" secondAttribute="leading" id="7Lf-o7-bXn"/>
+                    <constraint firstAttribute="trailing" secondItem="uPV-Ds-OyA" secondAttribute="trailing" constant="8" id="A41-8T-ie2"/>
+                    <constraint firstItem="dnM-Lt-WIg" firstAttribute="centerY" secondItem="LgF-2t-tid" secondAttribute="centerY" id="Bhw-eJ-UaF"/>
+                    <constraint firstAttribute="bottom" secondItem="A5d-eH-2P9" secondAttribute="bottom" id="CBT-X1-L4u"/>
+                    <constraint firstItem="uPV-Ds-OyA" firstAttribute="top" secondItem="3rc-6P-vWJ" secondAttribute="top" constant="2" id="Fcv-vI-EGu"/>
+                    <constraint firstItem="icu-IN-4he" firstAttribute="centerX" secondItem="3rc-6P-vWJ" secondAttribute="centerX" id="H5j-8h-66H"/>
+                    <constraint firstItem="dnM-Lt-WIg" firstAttribute="centerX" secondItem="3rc-6P-vWJ" secondAttribute="centerX" id="H8p-P2-5By"/>
+                    <constraint firstItem="7IU-bh-0oy" firstAttribute="width" secondItem="icu-IN-4he" secondAttribute="width" id="JTC-uP-0HU"/>
+                    <constraint firstItem="LgF-2t-tid" firstAttribute="top" secondItem="5lB-rw-lOq" secondAttribute="bottom" constant="4" id="MX6-Vk-LZX"/>
+                    <constraint firstItem="Dj9-kL-FGI" firstAttribute="leading" secondItem="icu-IN-4he" secondAttribute="trailing" constant="24" id="PJN-qf-CQn"/>
+                    <constraint firstItem="icu-IN-4he" firstAttribute="leading" secondItem="7IU-bh-0oy" secondAttribute="trailing" constant="24" id="VsL-js-Arn"/>
+                    <constraint firstItem="Dj9-kL-FGI" firstAttribute="bottom" secondItem="icu-IN-4he" secondAttribute="bottom" id="ZYI-vw-gIi"/>
+                    <constraint firstItem="uPV-Ds-OyA" firstAttribute="centerY" secondItem="5lB-rw-lOq" secondAttribute="centerY" id="aVx-4O-tWD"/>
+                    <constraint firstItem="5lB-rw-lOq" firstAttribute="top" secondItem="uPV-Ds-OyA" secondAttribute="bottom" constant="8" id="b8c-rP-hx9"/>
+                    <constraint firstItem="5lB-rw-lOq" firstAttribute="top" secondItem="3rc-6P-vWJ" secondAttribute="top" constant="40" id="bc8-PX-Ah5"/>
+                    <constraint firstAttribute="trailing" secondItem="A5d-eH-2P9" secondAttribute="trailing" id="den-xy-qHo"/>
+                    <constraint firstItem="LgF-2t-tid" firstAttribute="centerX" secondItem="5lB-rw-lOq" secondAttribute="centerX" id="ih8-jH-PS6"/>
+                    <constraint firstItem="7IU-bh-0oy" firstAttribute="bottom" secondItem="icu-IN-4he" secondAttribute="bottom" id="jQA-x5-uL8"/>
+                    <constraint firstItem="5lB-rw-lOq" firstAttribute="top" secondItem="3rc-6P-vWJ" secondAttribute="topMargin" constant="4" id="kV5-gL-P0B"/>
+                    <constraint firstItem="5lB-rw-lOq" firstAttribute="width" secondItem="3rc-6P-vWJ" secondAttribute="width" multiplier="0.8" id="tgV-9S-w1z"/>
+                    <constraint firstItem="dnM-Lt-WIg" firstAttribute="top" secondItem="LgF-2t-tid" secondAttribute="bottom" constant="4" id="tj4-hF-pa3"/>
+                    <constraint firstItem="LgF-2t-tid" firstAttribute="top" secondItem="5lB-rw-lOq" secondAttribute="bottom" constant="8" id="uts-Qo-CPx"/>
+                    <constraint firstItem="icu-IN-4he" firstAttribute="top" secondItem="dnM-Lt-WIg" secondAttribute="bottom" constant="20" id="v8I-Lj-Lcr"/>
+                    <constraint firstItem="Dj9-kL-FGI" firstAttribute="top" secondItem="icu-IN-4he" secondAttribute="top" id="vra-6g-hUK"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="b8c-rP-hx9"/>
+                        <exclude reference="bc8-PX-Ah5"/>
+                        <exclude reference="uts-Qo-CPx"/>
+                        <exclude reference="Bhw-eJ-UaF"/>
+                        <exclude reference="v8I-Lj-Lcr"/>
+                        <exclude reference="Fcv-vI-EGu"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="firstCircleImageView" destination="7IU-bh-0oy" id="bjo-oa-N7q"/>
+                <outlet property="itemsDetailsButton" destination="uPV-Ds-OyA" id="pm2-hD-ooJ"/>
+                <outlet property="menuItemDescriptionLabel" destination="LgF-2t-tid" id="LPZ-ds-iLg"/>
+                <outlet property="menuItemNameLabel" destination="5lB-rw-lOq" id="hKy-KR-ggj"/>
+                <outlet property="menuItemPriceDistanceLabel" destination="dnM-Lt-WIg" id="4EZ-l1-I54"/>
+                <outlet property="secondCircleImageView" destination="icu-IN-4he" id="uCu-nn-luO"/>
+                <outlet property="thirdCircleImageView" destination="Dj9-kL-FGI" id="phk-M0-vGd"/>
+            </connections>
+            <point key="canvasLocation" x="234" y="198"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Btn_MyList_DETAILSINCIRCLE_01" width="26" height="26"/>
+        <image name="jdFace" width="300" height="300"/>
+        <image name="miashaFace" width="2048" height="1365"/>
+        <image name="terryFace" width="180" height="180"/>
+    </resources>
+</document>

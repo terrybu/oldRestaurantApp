@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SF-UI-Display-Regular.otf">
+            <string>SFUIDisplay-Regular</string>
+            <string>SFUIDisplay-Regular</string>
+            <string>SFUIDisplay-Regular</string>
+            <string>SFUIDisplay-Regular</string>
+            <string>SFUIDisplay-Regular</string>
+            <string>SFUIDisplay-Regular</string>
+        </mutableArray>
+        <mutableArray key="SF-UI-Display-Semibold.otf">
+            <string>SFUIDisplay-Semibold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileViewController" customModule="Tastii" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTextField" destination="gCR-WX-weJ" id="xah-Nd-FwW"/>
+                <outlet property="firstNameTextField" destination="w9L-va-UXx" id="fim-SW-AtW"/>
+                <outlet property="lastNameTextField" destination="Rq6-kS-Crm" id="usb-uo-rce"/>
+                <outlet property="passwordTextField" destination="tJ3-cd-9cz" id="3RM-VR-CIj"/>
+                <outlet property="profileImageView" destination="tWQ-uj-N1k" id="F2h-3g-u6l"/>
+                <outlet property="view" destination="cjx-7Y-TYa" id="K6g-eQ-ao0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="cjx-7Y-TYa">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w9L-va-UXx" customClass="TastiiPaddedTextField" customModule="Tastii" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="48" width="291" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="aFP-b3-yMy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="RyP-fI-7wf"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rq6-kS-Crm" customClass="TastiiPaddedTextField" customModule="Tastii" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="96" width="375" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="tVf-bM-ro7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="MoH-m5-n80"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tJ3-cd-9cz" customClass="TastiiPaddedTextField" customModule="Tastii" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="192" width="375" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="Wom-kW-d87"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="9ee-gl-ddH"/>
+                    </connections>
+                </textField>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_profile_avatar_pic" translatesAutoresizingMaskIntoConstraints="NO" id="tWQ-uj-N1k">
+                    <rect key="frame" x="307" y="48" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="CI4-vC-LmI"/>
+                        <constraint firstAttribute="height" constant="60" id="Hux-9z-wuj"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11j-pv-CUT" userLabel="ChangePhotoButton">
+                    <rect key="frame" x="315" y="108" width="45" height="28"/>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="13"/>
+                    <state key="normal" title="Change">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="changeProfilePhotoButtonPressed:" destination="-1" eventType="touchUpInside" id="dkO-gd-CNX"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCi-B0-d9F" userLabel="GrayTopView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Account Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKD-WC-Gj4">
+                            <rect key="frame" x="124" y="13" width="127" height="22"/>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="18"/>
+                            <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="0.18722355769999999" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="sKD-WC-Gj4" firstAttribute="centerY" secondItem="eCi-B0-d9F" secondAttribute="centerY" id="5xQ-2p-IKG"/>
+                        <constraint firstItem="sKD-WC-Gj4" firstAttribute="centerX" secondItem="eCi-B0-d9F" secondAttribute="centerX" id="ZCb-qe-Dau"/>
+                        <constraint firstAttribute="height" constant="48" id="nJX-dE-jAY"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4k-Wh-L0S">
+                    <rect key="frame" x="122" y="269" width="131" height="36"/>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="20"/>
+                    <state key="normal" title="Save Changes">
+                        <color key="titleColor" red="0.88235294119999996" green="0.1647058824" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="saveChangesButtonPressed:" destination="-1" eventType="touchUpInside" id="ZHU-Se-cZg"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCR-WX-weJ" customClass="TastiiPaddedTextField" customModule="Tastii" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="144" width="375" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="3CN-Cb-PgI"/>
+                    </constraints>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="11j-pv-CUT" firstAttribute="centerX" secondItem="tWQ-uj-N1k" secondAttribute="centerX" id="2yv-Ul-W70"/>
+                <constraint firstItem="gCR-WX-weJ" firstAttribute="leading" secondItem="cjx-7Y-TYa" secondAttribute="leading" id="5kB-lY-oQi"/>
+                <constraint firstItem="eCi-B0-d9F" firstAttribute="leading" secondItem="cjx-7Y-TYa" secondAttribute="leading" id="78j-lC-4G0"/>
+                <constraint firstItem="gCR-WX-weJ" firstAttribute="top" secondItem="Rq6-kS-Crm" secondAttribute="bottom" id="91n-YP-G2d"/>
+                <constraint firstItem="w9L-va-UXx" firstAttribute="top" secondItem="eCi-B0-d9F" secondAttribute="bottom" id="AzK-rf-sUY"/>
+                <constraint firstAttribute="trailing" secondItem="w9L-va-UXx" secondAttribute="trailing" id="CyW-Ls-KkA"/>
+                <constraint firstItem="tJ3-cd-9cz" firstAttribute="top" secondItem="gCR-WX-weJ" secondAttribute="bottom" id="GvP-eJ-KoK"/>
+                <constraint firstItem="eCi-B0-d9F" firstAttribute="leading" secondItem="Rq6-kS-Crm" secondAttribute="leading" id="HfQ-ro-kqe"/>
+                <constraint firstItem="gCR-WX-weJ" firstAttribute="top" secondItem="eCi-B0-d9F" secondAttribute="bottom" constant="32" id="JBY-rq-96a"/>
+                <constraint firstItem="w9L-va-UXx" firstAttribute="leading" secondItem="cjx-7Y-TYa" secondAttribute="leading" id="N0i-8k-AbI"/>
+                <constraint firstItem="t4k-Wh-L0S" firstAttribute="centerX" secondItem="cjx-7Y-TYa" secondAttribute="centerX" id="Nbj-hY-vHt"/>
+                <constraint firstItem="Rq6-kS-Crm" firstAttribute="width" secondItem="cjx-7Y-TYa" secondAttribute="width" id="Pci-NN-G7M"/>
+                <constraint firstItem="gCR-WX-weJ" firstAttribute="top" secondItem="tWQ-uj-N1k" secondAttribute="bottom" constant="20" id="QTv-rt-xAX"/>
+                <constraint firstItem="eCi-B0-d9F" firstAttribute="top" secondItem="cjx-7Y-TYa" secondAttribute="top" id="TJ2-W5-99q"/>
+                <constraint firstItem="Rq6-kS-Crm" firstAttribute="leading" secondItem="w9L-va-UXx" secondAttribute="leading" id="X5d-uH-3zI"/>
+                <constraint firstItem="eCi-B0-d9F" firstAttribute="trailing" secondItem="Rq6-kS-Crm" secondAttribute="trailing" id="cUX-Zu-b8R"/>
+                <constraint firstItem="eCi-B0-d9F" firstAttribute="top" secondItem="cjx-7Y-TYa" secondAttribute="top" constant="48" id="dSo-nq-Y4q"/>
+                <constraint firstItem="tJ3-cd-9cz" firstAttribute="top" secondItem="Rq6-kS-Crm" secondAttribute="bottom" id="h3V-zt-LUV"/>
+                <constraint firstItem="eCi-B0-d9F" firstAttribute="leading" secondItem="gCR-WX-weJ" secondAttribute="leading" id="htH-nI-cu0"/>
+                <constraint firstItem="t4k-Wh-L0S" firstAttribute="top" secondItem="tJ3-cd-9cz" secondAttribute="bottom" constant="29" id="hzA-Eu-Alr"/>
+                <constraint firstItem="tWQ-uj-N1k" firstAttribute="top" secondItem="w9L-va-UXx" secondAttribute="top" id="l5P-fQ-IhY"/>
+                <constraint firstAttribute="trailing" secondItem="gCR-WX-weJ" secondAttribute="trailing" id="m5f-RV-eJD"/>
+                <constraint firstItem="tJ3-cd-9cz" firstAttribute="leading" secondItem="cjx-7Y-TYa" secondAttribute="leading" id="mzc-hT-so6"/>
+                <constraint firstAttribute="trailing" secondItem="tJ3-cd-9cz" secondAttribute="trailing" id="qbU-lx-tGz"/>
+                <constraint firstItem="tWQ-uj-N1k" firstAttribute="leading" secondItem="w9L-va-UXx" secondAttribute="trailing" constant="16" id="uCy-vO-BT4"/>
+                <constraint firstItem="11j-pv-CUT" firstAttribute="top" secondItem="tWQ-uj-N1k" secondAttribute="bottom" id="uI5-iJ-HAF"/>
+                <constraint firstItem="Rq6-kS-Crm" firstAttribute="top" secondItem="w9L-va-UXx" secondAttribute="bottom" id="w0k-Gm-Oyc"/>
+                <constraint firstItem="tWQ-uj-N1k" firstAttribute="trailing" secondItem="cjx-7Y-TYa" secondAttribute="trailingMargin" id="wp3-25-tj0"/>
+                <constraint firstAttribute="bottom" secondItem="eCi-B0-d9F" secondAttribute="bottom" constant="555" id="z6w-Tf-vBj"/>
+                <constraint firstAttribute="trailing" secondItem="eCi-B0-d9F" secondAttribute="trailing" id="zV5-ch-Z4T"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="HfQ-ro-kqe"/>
+                    <exclude reference="cUX-Zu-b8R"/>
+                    <exclude reference="dSo-nq-Y4q"/>
+                    <exclude reference="htH-nI-cu0"/>
+                    <exclude reference="z6w-Tf-vBj"/>
+                    <exclude reference="CyW-Ls-KkA"/>
+                    <exclude reference="JBY-rq-96a"/>
+                    <exclude reference="QTv-rt-xAX"/>
+                    <exclude reference="h3V-zt-LUV"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="217.5" y="120.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="no_profile_avatar_pic" width="160" height="160"/>
+    </resources>
+</document>

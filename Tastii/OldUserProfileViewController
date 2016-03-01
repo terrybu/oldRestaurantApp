@@ -1,0 +1,109 @@
+//
+//  UserProfileViewController.swift
+//  Tastii
+//
+//  Created by Terry Bu on 12/15/15.
+//  Copyright © 2015 Tastii. All rights reserved.
+//
+
+import UIKit
+
+class UserProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ActivityCellDesignerDelegate {
+
+@IBOutlet var userProfileImageView: UIImageView!
+@IBOutlet var numberOfFollowersLabel: UILabel!
+@IBOutlet var userNameLabel: UILabel!
+@IBOutlet var tableView: UITableView!
+
+var user: User!
+var activityCellDesigner = ActivityCellDesigner()
+
+override func viewDidLoad() {
+super.viewDidLoad()
+self.navigationController?.navigationBar.hidden = true
+
+tableView.registerNib(UINib(nibName: "ActivityTableViewCell", bundle: nil), forCellReuseIdentifier: "ActivityTableViewCell")
+
+if let imageName = user.imageName {
+userProfileImageView.image = UIImage(named:imageName)
+}
+
+userProfileImageView.layer.cornerRadius = userProfileImageView.frame.size.height/2
+userProfileImageView.clipsToBounds = true
+userProfileImageView.layer.borderWidth = 2.0
+userProfileImageView.layer.borderColor = UIColor(rgba: "#ff6b69").CGColor
+
+userNameLabel.text = "\(user.firstName!.uppercaseString) \(user.lastName!.uppercaseString)"
+numberOfFollowersLabel.text = "\(user.followers)"
+
+//This gets rid of annoying dividers in "empty tableview cells" when there's not enough tableview rows showing in the data source, great
+self.tableView.tableFooterView = UIView(frame: CGRectZero)
+
+activityCellDesigner.delegate = self
+self.navigationController!.navigationBar.barStyle = UIBarStyle.Default
+}
+
+
+//MARK: TableViewDataSource Protocol Methods
+func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+return 1
+}
+
+func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+if let activities = user.activitiesArray {
+return activities.count
+}
+return 0
+}
+
+func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
+let cell = tableView.dequeueReusableCellWithIdentifier("ActivityTableViewCell", forIndexPath: indexPath) as! ActivityTableViewCell
+
+let currentActivity = user.activitiesArray![indexPath.row]
+
+activityCellDesigner.setUpActionableTextWithinTextView(currentActivity, cell: cell, indexPath: indexPath)
+activityCellDesigner.setUpLeftUserProfileCircleImageView(currentActivity, cell: cell, indexPath: indexPath)
+
+cell.activityTimeCreatedLabel.text = "10 mins"
+cell.rightTasteItemImageView.image = UIImage(named: currentActivity.item.imageName!)
+cell.rightTasteItemImageView.layer.cornerRadius = 5
+cell.rightTasteItemImageView.clipsToBounds = true
+
+return cell
+}
+
+//MARK: TableViewDelegate Protocol Methods
+func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+return 80
+}
+
+//MARK: ActivityCellDesignerDelegate
+func didDetectTextViewNamePress(option: ShowProfileOption, indexPath: Int) {
+let userProfileVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("UserProfileViewController") as! UserProfileViewController
+if option == ShowProfileOption.Buddy {
+let redeemActivity = user.activitiesArray![indexPath] as! TastiingRedeemActivity
+userProfileVC.user = redeemActivity.redeemBuddies![0]
+self.navigationController?.pushViewController(userProfileVC, animated: true)
+}
+}
+
+func didDetectBuddyCircleImageViewPress(indexPath: Int) {
+let activity = self.user.activitiesArray![indexPath] as! TastiingRedeemActivity
+let buddyUser = activity.redeemBuddies![0]
+let userProfileVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier(kUserProfileViewControllerStoryboardIdentifier) as! UserProfileViewController
+userProfileVC.user = buddyUser
+self.navigationController?.pushViewController(userProfileVC, animated: true)
+}
+
+func didDetectUserCircleImageViewPress(indexPath: Int) {
+//do nothing on USER imageview press because we are already on his/her profile
+}
+
+@IBAction func backButtonPressed() {
+navigationController?.popToRootViewControllerAnimated(false)
+}
+
+
+
+}

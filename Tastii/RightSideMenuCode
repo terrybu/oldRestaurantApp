@@ -1,0 +1,162 @@
+//MARK: RightSideSlideOutSettingsMenu Code
+
+private func setUpSettingsSlideOutMenu() {
+self.blackOverlayLeftView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height-self.tabBar.frame.size.height))
+blackOverlayLeftView.backgroundColor = UIColor.clearColor()
+
+let tapGesture = UITapGestureRecognizer(target: self, action: "blackOverlayWasTapped")
+blackOverlayLeftView.userInteractionEnabled = true
+blackOverlayLeftView.addGestureRecognizer(tapGesture)
+
+rightSideContainerView = UIView(frame: CGRect(x: view.frame.width, y: 0, width: view.frame.width, height: view.frame.height - tabBar.frame.size.height))
+settingsMenuTableView = SettingsMenuTableView(frame: CGRect(x: 0, y: 0, width: rightSideContainerView.frame.width, height: rightSideContainerView.frame.height))
+settingsMenuTableViewDataSource = SettingsMenuTableViewDataSource()
+settingsMenuTableViewDataSource.delegate = self
+settingsMenuTableView.delegate = settingsMenuTableViewDataSource
+settingsMenuTableView.dataSource = settingsMenuTableViewDataSource
+settingsMenuTableView.tableFooterView = UIView(frame: CGRectZero)
+settingsMenuTableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+settingsMenuTableView.separatorColor = UIColor(rgba: "#aaaaaa")
+rightSideContainerView.addSubview(settingsMenuTableView)
+
+self.settingsNavigationController = self.viewControllers![4] as! SettingsNavigationController
+self.delegate = settingsNavigationController
+NSNotificationCenter.defaultCenter().addObserver(self, selector: "showSettingsRightSideMenu", name: kOpenRightSideMenuTableView, object: nil)
+NSNotificationCenter.defaultCenter().addObserver(self, selector: "closeSettingsRightSideMenu", name: kCloseRightSideMenuTableView, object: nil)
+removeTabbarItemText()
+}
+
+
+func removeTabbarItemText() {
+if let items = tabBar.items {
+for item in items {
+item.title = ""
+item.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+}
+}
+}
+
+@objc
+private func blackOverlayWasTapped() {
+closeSettingsRightSideMenu()
+}
+
+@objc
+private func showSettingsRightSideMenu() {
+self.selectedIndex = 4;
+let editProfileVC = EditProfileViewController()
+editProfileVC.tastiiTabBarViewController = self
+self.settingsNavigationController.viewControllers = [editProfileVC]
+removeTabbarItemText()
+
+//this updates the headerview namelabel, in case it got updated
+if let headerView = self.settingsMenuTableViewDataSource.headerView {
+let fullName =
+"\(UserManager.sharedInstance.currentUser!.firstName!) \(UserManager.sharedInstance.currentUser!.lastName!)"
+headerView.nameLabel.text = fullName
+if let imageURLString = UserManager.sharedInstance.currentUser!.imageURLString {
+headerView.profileCircleImageView.af_setImageWithURL(NSURL(string: imageURLString)!, placeholderImage: placeholderImage, filter: nil, imageTransition: UIImageView.ImageTransition.CrossDissolve(0.1), completion: { (response) -> Void in
+if response.result.isSuccess {
+print(response.result.value)
+} else {
+print(response.result.error)
+}
+})
+} else {
+headerView.profileCircleImageView.image = placeholderImage
+}
+}
+
+UIView.animateWithDuration(0.3, animations: { () -> Void in
+self.rightSideContainerView.frame = CGRectOffset(self.rightSideContainerView.frame, -self.view.frame.width+50, 0)
+self.blackOverlayLeftView.backgroundColor = UIColor.blackColor()
+self.blackOverlayLeftView.alpha = 0.5
+self.view.addSubview(self.blackOverlayLeftView)
+self.view.addSubview(self.rightSideContainerView)
+}, completion: { (completed) -> Void in
+//done
+self.settingsMenuTableView.showing = true
+})
+}
+
+@objc
+private func closeSettingsRightSideMenu() {
+UIView.animateWithDuration(0.3, animations: { () -> Void in
+self.rightSideContainerView.frame = CGRect(x: self.view.frame.width, y: 0, width: self.view.frame.width, height: self.view.frame.height - self.tabBar.frame.size.height)
+self.blackOverlayLeftView.alpha = 0.0
+}, completion: { (completed) -> Void in
+//done
+self.settingsMenuTableView.showing = false
+self.blackOverlayLeftView.removeFromSuperview()
+})
+}
+
+extension TastiiTabBarViewController: SettingsMenuTableViewSubSelectionDelegate {
+
+func didPressEditProfile() {
+NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: kCloseRightSideMenuTableView, object: nil))
+let editMyInfoVc = EditProfileViewController()
+editMyInfoVc.tastiiTabBarViewController = self
+settingsNavigationController.viewControllers = [editMyInfoVc]
+
+print("did press EDIT PROFILE")
+}
+
+func didPressMyTastePreferences() {
+NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: kCloseRightSideMenuTableView, object: nil))
+let tastePreferencesVC = MyTastePreferencesSettingsViewController()
+tastePreferencesVC.tastiiTabBarViewController = self
+settingsNavigationController.viewControllers = [tastePreferencesVC]
+
+print("did press my taste preferences")
+}
+
+func didPressFAQsSupport() {
+NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: kCloseRightSideMenuTableView, object: nil))
+let faqVC = FAQViewController()
+faqVC.tastiiTabBarViewController = self
+settingsNavigationController.viewControllers = [faqVC]
+print("did press faq support")
+}
+
+func didPressLogOut() {
+NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: kCloseRightSideMenuTableView, object: nil))
+UserManager.sharedInstance.logOut()
+NSNotificationCenter.defaultCenter().addObserver(self, selector: "goBackToLoginScreen", name: kLogOutWasSuccessfulOnServer, object: nil)
+print("did press log Out")
+}
+
+func goBackToLoginScreen() {
+print("going back to login screen")
+self.dismissViewControllerAnimated(true, completion: nil)
+}
+}
+
+
+extension UIImage {
+class func imageWithColor(color: UIColor, size: CGSize) -> UIImage {
+let rect: CGRect = CGRectMake(0, 0, size.width, size.height)
+UIGraphicsBeginImageContextWithOptions(size, false, 0)
+color.setFill()
+UIRectFill(rect)
+let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+UIGraphicsEndImageContext()
+return image
+}
+}
+
+
+func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
+if viewController is SettingsNavigationController {
+let homeTabBarVC = self.tabBarController as! TastiiTabBarViewController
+if !homeTabBarVC.settingsMenuTableView.showing {
+NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: kOpenRightSideMenuTableView, object: nil))
+} else {
+NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: kCloseRightSideMenuTableView, object: nil))
+}
+return false
+} else {
+NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: kCloseRightSideMenuTableView, object: nil))
+}
+return true
+}

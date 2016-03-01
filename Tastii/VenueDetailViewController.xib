@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VenueDetailViewController" customModule="Tastii" customModuleProvider="target">
+            <connections>
+                <outlet property="addressLabel" destination="6g1-0s-oG5" id="y6o-AH-V3Z"/>
+                <outlet property="hours" destination="H3V-HL-sXD" id="cbN-yN-1k4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6g1-0s-oG5" userLabel="venueAddressLabel">
+                    <rect key="frame" x="75" y="16" width="450" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="T1t-sB-dQ8"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3V-HL-sXD" userLabel="venueHoursLabel">
+                    <rect key="frame" x="131" y="64" width="338" height="148"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="148" id="OzJ-zs-XN6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nRT-gZ-YqB">
+                    <rect key="frame" x="0.0" y="244" width="600" height="356"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="m1K-4Q-CPP"/>
+                        <outlet property="delegate" destination="-1" id="86z-A2-Iej"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="nRT-gZ-YqB" secondAttribute="trailing" id="4aa-OF-Evb"/>
+                <constraint firstItem="H3V-HL-sXD" firstAttribute="width" secondItem="6g1-0s-oG5" secondAttribute="width" multiplier="0.75" id="CFa-D3-o71"/>
+                <constraint firstItem="nRT-gZ-YqB" firstAttribute="top" secondItem="H3V-HL-sXD" secondAttribute="bottom" constant="32" id="EAE-pR-XYH"/>
+                <constraint firstItem="H3V-HL-sXD" firstAttribute="centerX" secondItem="6g1-0s-oG5" secondAttribute="centerX" id="Ege-A7-krm"/>
+                <constraint firstItem="6g1-0s-oG5" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.75" id="KWC-0A-5l0"/>
+                <constraint firstItem="6g1-0s-oG5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="16" id="P2A-u5-Sbc"/>
+                <constraint firstItem="6g1-0s-oG5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UDo-jb-PyT"/>
+                <constraint firstItem="nRT-gZ-YqB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aPg-7h-gG8"/>
+                <constraint firstAttribute="bottom" secondItem="nRT-gZ-YqB" secondAttribute="bottom" id="vKb-CY-ci0"/>
+                <constraint firstItem="H3V-HL-sXD" firstAttribute="top" secondItem="6g1-0s-oG5" secondAttribute="bottom" constant="16" id="vQ3-xn-LOc"/>
+            </constraints>
+            <point key="canvasLocation" x="136" y="-653"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,43 @@
+//make the class FBSDKLoginButtonDelegate
+
+//        setUpFacebookLoginButton()
+
+//MARK: Facebook Login Related
+private func setUpFacebookLoginButton() {
+let fbLoginButton = FBSDKLoginButton()
+//        fbLoginButton.readPermissions = ["public_profile", "email", "user_friends", "user_birthday"]
+//somethng like user_birthday needs fb review process to be approved
+
+fbLoginButton.readPermissions = ["public_profile", "email", "user_friends"]
+fbLoginButton.center = view.center
+fbLoginButton.delegate = self
+self.view.addSubview(fbLoginButton)
+}
+
+func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+
+let req = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"email,name,first_name,last_name,age_range,gender"], tokenString: result.token.tokenString, version: nil, HTTPMethod: "GET")
+req.startWithCompletionHandler({ (connection, result, error) -> Void in
+print("This logged in user: \(result)")
+if error == nil{
+if let dict = result as? Dictionary<String, AnyObject>{
+print("This is dictionary of user infor getting from facebook:")
+print(dict)
+if let firstName = dict["first_name"] {
+print("your first name is \(firstName)")
+}
+}
+} else {
+print(error)
+}
+})
+}
+
+func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+print("logout")
+}
+
+func loginButtonWillLogin(loginButton: FBSDKLoginButton!) -> Bool {
+
+return true
+}

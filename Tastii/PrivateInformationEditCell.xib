@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SF-UI-Display-Regular.otf">
+            <string>SFUIDisplay-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PrivateInformationEditCellIdentifier" id="KGk-i7-Jjw" customClass="PrivateInformationEditCell" customModule="Tastii" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XD9-ci-Llq" userLabel="ActionButton">
+                        <rect key="frame" x="272" y="6" width="40" height="29"/>
+                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PlaceHolder Text" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="2L0-jK-zss" userLabel="EditingInfoTextField">
+                        <rect key="frame" x="8" y="11" width="264" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="255" id="NdT-2a-mDU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="NdT-2a-mDU"/>
+                            </mask>
+                        </variation>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XD9-ci-Llq" firstAttribute="centerY" secondItem="2L0-jK-zss" secondAttribute="centerY" id="7TZ-cE-FaO"/>
+                    <constraint firstItem="XD9-ci-Llq" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.15:1" id="FcE-t3-eM5"/>
+                    <constraint firstItem="XD9-ci-Llq" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="GC4-86-nNa"/>
+                    <constraint firstItem="2L0-jK-zss" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="HlB-1t-mnr"/>
+                    <constraint firstItem="XD9-ci-Llq" firstAttribute="leading" secondItem="2L0-jK-zss" secondAttribute="trailing" id="Qi5-IE-5hp"/>
+                    <constraint firstItem="2L0-jK-zss" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="X6g-UJ-U2J"/>
+                    <constraint firstItem="2L0-jK-zss" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.8:1" id="nSu-nw-zyS"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="nSu-nw-zyS"/>
+                        <exclude reference="FcE-t3-eM5"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="actionButton" destination="XD9-ci-Llq" id="ISo-Dx-s4T"/>
+                <outlet property="editInfoTextField" destination="2L0-jK-zss" id="hic-4t-85p"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

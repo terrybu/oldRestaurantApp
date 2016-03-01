@@ -1,0 +1,48 @@
+//
+//  MyMenuViewController.swift
+//  Tastii
+//
+//  Created by Terry Bu on 12/9/15.
+//  Copyright © 2015 Tastii. All rights reserved.
+//
+
+import UIKit
+import TagListView
+
+enum TagMode: Int {
+case Neutral = 0,
+Liked = 1,
+Disliked = 2
+}
+
+class MyMenuViewController: UIViewController, TagListViewDelegate {
+
+@IBOutlet var tastiiTagListView: TagListView!
+
+override func viewDidLoad() {
+super.viewDidLoad()
+tastiiTagListView.delegate = self
+tastiiTagListView.textFont = UIFont.systemFontOfSize(24)
+tastiiTagListView.alignment = .Right
+
+let beefBurgerTag = tastiiTagListView.addTag("BEEF BURGER")
+beefBurgerTag.onTap = { beefBurgerTag in
+print("beefBurgerTag on tap")
+}
+let guacamoleTag = tastiiTagListView.addTag("GUACAMOLE")
+guacamoleTag.onTap = { guacamoleTag in
+print("Guacamole on tap")
+}
+let mayoTag = tastiiTagListView.addTag("MAYONNAISE")
+mayoTag.onTap = { guacamoleTag in
+print("Guacamole on tap")
+}
+}
+
+func tagPressed(title: String, tagView: TagView, sender: TagListView) {
+TagColorEffectHandler.sharedInstance.handleTagPress(tagView)
+}
+
+
+
+}

@@ -1,0 +1,53 @@
+PODS:
+  - Alamofire (3.2.0)
+  - AlamofireImage (2.3.1):
+    - Alamofire (~> 3.1)
+  - Bolts (1.6.0):
+    - Bolts/AppLinks (= 1.6.0)
+    - Bolts/Tasks (= 1.6.0)
+  - Bolts/AppLinks (1.6.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.6.0)
+  - FBSDKCoreKit (4.9.1):
+    - Bolts (~> 1.5)
+  - FBSDKLoginKit (4.9.1):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.9.1):
+    - FBSDKCoreKit
+  - HockeySDK (3.8.5):
+    - HockeySDK/AllFeaturesLib (= 3.8.5)
+  - HockeySDK/AllFeaturesLib (3.8.5)
+  - Koloda (2.0.8):
+    - pop (~> 1.0)
+  - MBProgressHUD (0.9.2)
+  - pop (1.0.9)
+  - SwiftyJSON (2.3.2)
+  - TagListView (0.4.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - FBSDKCoreKit (~> 4.8)
+  - FBSDKLoginKit (~> 4.8)
+  - FBSDKShareKit (~> 4.8)
+  - HockeySDK
+  - Koloda
+  - MBProgressHUD
+  - SwiftyJSON
+  - TagListView
+
+SPEC CHECKSUMS:
+  Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
+  AlamofireImage: 8256f88835f58257a76ea2738d3773be5057f7ed
+  Bolts: f52a250053bb517ca874523c3913776359ab3def
+  FBSDKCoreKit: aee20b6d9855f15b618d4fddd1a5ad45f5a4a59d
+  FBSDKLoginKit: ec22dc49bd372b064e93d6773df4ffefb3a552a2
+  FBSDKShareKit: b8c8ef0ed173f9fc1b3c8df384a0202ce53008d4
+  HockeySDK: dd11a2b9da3372fd025643bee5bc10c8c613d169
+  Koloda: 7bdf4ed011ef100ea216c0f4b3bf3619d64e154d
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  TagListView: 38700330380d7c874f8f9c381ce651d822f11ebf
+
+COCOAPODS: 0.39.0

@@ -1,0 +1,10 @@
+["Copperplate", "Heiti SC", "Iowan Old Style", "Kohinoor Telugu", "SF UI Text", "Heiti TC", "Courier New", "Gill Sans", "Apple SD Gothic Neo", "Marker Felt", "Thonburi", "Avenir Next Condensed", "Tamil Sangam MN", "Helvetica Neue", "Gurmukhi MN", "Times New Roman", "Georgia", "Apple Color Emoji", "Arial Rounded MT Bold", "Kailasa", "Kohinoor Devanagari", "Kohinoor Bangla", "Chalkboard SE", "Sinhala Sangam MN", "PingFang TC", "Gujarati Sangam MN", "Damascus", "Noteworthy", "Geeza Pro", "Avenir", "Academy Engraved LET", "Mishafi", "Futura", "Farah", "Kannada Sangam MN", "Arial Hebrew", "Arial", "Party LET", "Chalkduster", "Hoefler Text", "Optima", "Palatino", "Malayalam Sangam MN", "Al Nile", "Lao Sangam MN", "Bradley Hand", "PingFang HK", "Trebuchet MS", "Helvetica", "Courier", "Cochin", "Hiragino Mincho ProN", "Devanagari Sangam MN", "Oriya Sangam MN", "Snell Roundhand", "Zapf Dingbats", "Bodoni 72", "American Typewriter", "Verdana", "Avenir Next", "Baskerville", "Khmer Sangam MN", "Didot", "Savoye LET", "Bodoni Ornaments", "Symbol", "Menlo", "Bodoni 72 Smallcaps", "SF UI Display", "Papyrus", "Hiragino Sans", "PingFang SC", "Euphemia UCAS", "Telugu Sangam MN", "Bangla Sangam MN", "Dosis", "Zapfino", "Bodoni 72 Oldstyle"]
+
+["Dosis-Regular", "Dosis-Medium", "Dosis-SemiBold"]
+
+["SFUIDisplay-Regular", "SFUIDisplay-Medium", "SFUIDisplay-Semibold"]
+
+var myArray = UIFont.familyNames() as Array
+print(myArray)
+print(UIFont.fontNamesForFamilyName("SF UI Display"))
+

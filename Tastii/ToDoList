@@ -1,0 +1,7 @@
+2.3.2016
+
+1) Facebook login button needs to be implemented on startup
+2) Creation signup still does not send photo image data properly
+3) What's up with Swipeable card textview misaligning on iphone 6s? weird. fix it
+    - refer to github issue that was answered on Koloda
+4) Miasha mentioned session. If you exit out of app and come back, can you still login the same user?

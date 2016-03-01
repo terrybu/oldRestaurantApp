@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Dosis-Regular.ttf">
+            <string>Dosis-Regular</string>
+        </mutableArray>
+        <mutableArray key="SF-UI-Display-Medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </mutableArray>
+        <mutableArray key="SF-UI-Display-Regular.otf">
+            <string>SFUIDisplay-Regular</string>
+            <string>SFUIDisplay-Regular</string>
+            <string>SFUIDisplay-Regular</string>
+            <string>SFUIDisplay-Regular</string>
+            <string>SFUIDisplay-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BrowseCardView" customModule="Tastii" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="536" height="489"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2xY-qo-woQ">
+                    <rect key="frame" x="0.0" y="0.0" width="536" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="XxR-4J-YNe"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_Browse_BANNER_01" translatesAutoresizingMaskIntoConstraints="NO" id="jSI-Go-Iai">
+                    <rect key="frame" x="0.0" y="26" width="136" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="27l-8N-PQm"/>
+                        <constraint firstAttribute="width" constant="136" id="yFa-Wp-W72"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_Browse_BLACKGRADIENTOVERLAY_02" translatesAutoresizingMaskIntoConstraints="NO" id="Q1s-3q-3RD" userLabel="blackGradientImageView">
+                    <rect key="frame" x="0.0" y="232" width="536" height="68"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="68" id="yzq-77-ozb"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".3 mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNW-k6-h0o" userLabel="Item Distance Label">
+                    <rect key="frame" x="8" y="308" width="37" height="21"/>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
+                    <color key="textColor" red="0.65490196078431373" green="0.65490196078431373" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Redeem with a &quot;Taste Bud&quot;" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnJ-LT-uL4" userLabel="Item Redeem Label">
+                    <rect key="frame" x="8" y="254" width="128" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="128" id="95w-M4-TiO"/>
+                        <constraint firstAttribute="height" constant="48" id="i2n-Pf-Da0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
+                    <color key="textColor" red="0.99611729383468628" green="0.99587720632553101" blue="0.99216729402542114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="38 remaining" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAa-8R-iSE" userLabel="Item Remaining Label">
+                    <rect key="frame" x="442" y="260" width="86" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="128" id="5Tb-BP-coq"/>
+                        <constraint firstAttribute="height" constant="48" id="eOq-7I-EHC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
+                    <color key="textColor" red="0.99611729383468628" green="0.99587720632553101" blue="0.99216729402542114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="5Tb-BP-coq"/>
+                            <exclude reference="eOq-7I-EHC"/>
+                        </mask>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expires 12/10/15" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgG-1i-gOu" userLabel="Item Expiration Label">
+                    <rect key="frame" x="422" y="278" width="106" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="D9j-nC-CUg"/>
+                        <constraint firstAttribute="width" constant="128" id="Up8-cf-c0A"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
+                    <color key="textColor" red="0.99611729383468628" green="0.99587720632553101" blue="0.99216729402542114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="D9j-nC-CUg"/>
+                            <exclude reference="Up8-cf-c0A"/>
+                        </mask>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 for 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dy-LD-Fqh" userLabel="2 for 1 label">
+                    <rect key="frame" x="38" y="29" width="53" height="31"/>
+                    <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AVOCADO BURGER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mF2-C5-Oym" userLabel="Item Name Label">
+                    <rect key="frame" x="193" y="340" width="150" height="21"/>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="17"/>
+                    <color key="textColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdQ-sr-uGn">
+                    <rect key="frame" x="503" y="304" width="25" height="25"/>
+                    <state key="normal" image="Btn_Browse_DETAILS_02"/>
+                    <connections>
+                        <action selector="detailsButtonPressed" destination="iN0-l3-epB" eventType="touchUpInside" id="ppL-1y-azY"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Fresh avocado, lettuce, tomato, ranch, mayo on a bun with sweet potato fries" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zpg-Ei-725" userLabel="Item Description TextView">
+                    <rect key="frame" x="24" y="369" width="488" height="120"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="140" id="AFz-gf-QIX"/>
+                    </constraints>
+                    <color key="textColor" red="0.65490196078431373" green="0.65490196078431373" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="AFz-gf-QIX"/>
+                        </mask>
+                    </variation>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWZ-fd-ydg">
+                    <rect key="frame" x="238" y="276" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Mof-Oj-oyN"/>
+                        <constraint firstAttribute="width" constant="60" id="USq-3B-IzQ"/>
+                    </constraints>
+                    <state key="normal" image="btn_Details_SHARE_01"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="mF2-C5-Oym" firstAttribute="top" secondItem="YWZ-fd-ydg" secondAttribute="bottom" constant="4" id="0W4-DR-0KR"/>
+                <constraint firstItem="YWZ-fd-ydg" firstAttribute="top" secondItem="2xY-qo-woQ" secondAttribute="bottom" constant="-24" id="1J6-A0-cUh"/>
+                <constraint firstItem="9dy-LD-Fqh" firstAttribute="centerX" secondItem="jSI-Go-Iai" secondAttribute="centerX" constant="-4" id="5s9-Pf-JWa"/>
+                <constraint firstAttribute="trailing" secondItem="2xY-qo-woQ" secondAttribute="trailing" id="70K-bV-8o6"/>
+                <constraint firstItem="QdQ-sr-uGn" firstAttribute="top" secondItem="rgG-1i-gOu" secondAttribute="bottom" constant="8" id="7EN-c0-jrg"/>
+                <constraint firstItem="bAa-8R-iSE" firstAttribute="trailing" secondItem="rgG-1i-gOu" secondAttribute="trailing" id="Aue-3G-Q4d"/>
+                <constraint firstAttribute="trailing" secondItem="Q1s-3q-3RD" secondAttribute="trailing" id="BUT-JQ-a4b"/>
+                <constraint firstItem="Q1s-3q-3RD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Eam-hr-q0p"/>
+                <constraint firstItem="rgG-1i-gOu" firstAttribute="top" secondItem="bAa-8R-iSE" secondAttribute="bottom" id="FTg-UM-lF0"/>
+                <constraint firstItem="2xY-qo-woQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JYk-fA-R2p"/>
+                <constraint firstAttribute="trailing" secondItem="QdQ-sr-uGn" secondAttribute="trailing" constant="8" id="JnX-lC-RQa"/>
+                <constraint firstItem="KnJ-LT-uL4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="UD6-MB-GEV"/>
+                <constraint firstItem="rgG-1i-gOu" firstAttribute="bottom" secondItem="KnJ-LT-uL4" secondAttribute="bottom" constant="-6" id="WC5-NN-FyW"/>
+                <constraint firstItem="wNW-k6-h0o" firstAttribute="top" secondItem="KnJ-LT-uL4" secondAttribute="bottom" constant="6" id="WMC-Yg-A3U"/>
+                <constraint firstItem="jSI-Go-Iai" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="26" id="Xqg-3n-Me7"/>
+                <constraint firstAttribute="trailing" secondItem="Zpg-Ei-725" secondAttribute="trailing" constant="24" id="Ym5-2l-XsN"/>
+                <constraint firstItem="YWZ-fd-ydg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="aoa-Qz-D1u"/>
+                <constraint firstItem="9dy-LD-Fqh" firstAttribute="centerY" secondItem="jSI-Go-Iai" secondAttribute="centerY" constant="-8" id="ePN-no-ZEm"/>
+                <constraint firstItem="wNW-k6-h0o" firstAttribute="top" secondItem="Q1s-3q-3RD" secondAttribute="bottom" constant="8" symbolic="YES" id="fHz-G6-mbN"/>
+                <constraint firstItem="QdQ-sr-uGn" firstAttribute="top" secondItem="Q1s-3q-3RD" secondAttribute="bottom" constant="4" id="gtx-BK-Zg6"/>
+                <constraint firstItem="wNW-k6-h0o" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="hfB-B4-DRC"/>
+                <constraint firstItem="2xY-qo-woQ" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="1:2" id="iuy-eH-VyU"/>
+                <constraint firstItem="QdQ-sr-uGn" firstAttribute="centerY" secondItem="wNW-k6-h0o" secondAttribute="centerY" constant="-2" id="j9Z-qy-fsv"/>
+                <constraint firstItem="Zpg-Ei-725" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="jtx-Au-is1"/>
+                <constraint firstItem="mF2-C5-Oym" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="lDZ-Mq-AHT"/>
+                <constraint firstItem="2xY-qo-woQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lfl-v8-OsV"/>
+                <constraint firstItem="bAa-8R-iSE" firstAttribute="top" secondItem="KnJ-LT-uL4" secondAttribute="top" id="paC-Kj-826"/>
+                <constraint firstItem="Q1s-3q-3RD" firstAttribute="top" secondItem="jSI-Go-Iai" secondAttribute="bottom" constant="171" id="rs4-ss-Fri"/>
+                <constraint firstItem="2xY-qo-woQ" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="7:10" id="sSp-gX-fhC"/>
+                <constraint firstAttribute="bottom" secondItem="Zpg-Ei-725" secondAttribute="bottom" id="tZA-kr-A56"/>
+                <constraint firstItem="wNW-k6-h0o" firstAttribute="top" secondItem="2xY-qo-woQ" secondAttribute="bottom" constant="8" id="vXu-pX-wlz"/>
+                <constraint firstItem="jSI-Go-Iai" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wXx-3p-BkL"/>
+                <constraint firstItem="Zpg-Ei-725" firstAttribute="top" secondItem="mF2-C5-Oym" secondAttribute="bottom" constant="8" id="y8D-2d-M5d"/>
+                <constraint firstAttribute="trailing" secondItem="rgG-1i-gOu" secondAttribute="trailing" constant="8" id="zqR-kf-yp7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="iuy-eH-VyU"/>
+                    <exclude reference="sSp-gX-fhC"/>
+                    <exclude reference="rs4-ss-Fri"/>
+                    <exclude reference="paC-Kj-826"/>
+                    <exclude reference="7EN-c0-jrg"/>
+                    <exclude reference="gtx-BK-Zg6"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="foodItemImageView" destination="2xY-qo-woQ" id="khp-xe-jAp"/>
+            </connections>
+            <point key="canvasLocation" x="343" y="-74.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Btn_Browse_DETAILS_02" width="25" height="25"/>
+        <image name="Img_Browse_BANNER_01" width="78" height="34"/>
+        <image name="Img_Browse_BLACKGRADIENTOVERLAY_02" width="214" height="40"/>
+        <image name="btn_Details_SHARE_01" width="92" height="92"/>
+    </resources>
+</document>

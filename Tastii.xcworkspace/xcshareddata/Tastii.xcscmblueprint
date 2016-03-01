@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "69794C3065A45D06229ADC130193E92E5368DE47",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "69794C3065A45D06229ADC130193E92E5368DE47" : 0,
+    "798F4C4C8DF63ADED4D5DA265F0FB1BD78FAB1D2" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "719D9246-FC3B-414A-8387-F686615C02E0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "69794C3065A45D06229ADC130193E92E5368DE47" : "Consumer%20App\/",
+    "798F4C4C8DF63ADED4D5DA265F0FB1BD78FAB1D2" : "Beta%201:19:2016\/Tastii-ClosedBetaDirectCopy\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Tastii",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Tastii.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tastii\/Tastii-Consumer-iOS",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "69794C3065A45D06229ADC130193E92E5368DE47"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tastii\/Tastii-Closed-Beta-Jan2015",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "798F4C4C8DF63ADED4D5DA265F0FB1BD78FAB1D2"
+    }
+  ]
+}

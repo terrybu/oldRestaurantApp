@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VenueMenuViewController" customModule="Tastii" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="LHE-11-F0I" id="lDT-TX-SfZ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="0kt-B7-rmO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LHE-11-F0I">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="GhT-3z-AK9"/>
+                        <outlet property="delegate" destination="-1" id="lFr-7j-UiP"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="LHE-11-F0I" secondAttribute="trailing" id="7wt-Bh-H50"/>
+                <constraint firstItem="LHE-11-F0I" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VeE-CR-vjd"/>
+                <constraint firstAttribute="bottom" secondItem="LHE-11-F0I" secondAttribute="bottom" id="jvS-Eo-v5N"/>
+                <constraint firstItem="LHE-11-F0I" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vjp-Jb-Ahb"/>
+            </constraints>
+            <point key="canvasLocation" x="248" y="104"/>
+        </view>
+    </objects>
+</document>

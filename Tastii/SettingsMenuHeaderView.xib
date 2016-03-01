@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SettingsMenuHeaderView" customModule="Tastii" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="burger" translatesAutoresizingMaskIntoConstraints="NO" id="2AC-iI-UbA">
+                    <rect key="frame" x="0.0" y="0.0" width="325" height="200"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="2AC-iI-UbA" secondAttribute="trailing" id="BRa-OX-pRY"/>
+                <constraint firstAttribute="bottom" secondItem="2AC-iI-UbA" secondAttribute="bottom" id="EcB-J8-WtN"/>
+                <constraint firstItem="2AC-iI-UbA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Lbh-cc-I07"/>
+                <constraint firstItem="2AC-iI-UbA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="w5E-Od-Ds5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="burger" width="256" height="256"/>
+    </resources>
+</document>
